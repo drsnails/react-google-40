@@ -4,12 +4,16 @@ module.exports = {
             "@babel/preset-env",
             {
                 targets: {
-                    "chrome": "40"
+                    chrome: "40",
                 },
-                useBuiltIns: "usage",
-                corejs: 3
-            }
+                useBuiltIns: "entry",
+                corejs: 3,
+            },
         ],
-        "@babel/preset-react"
-    ]
-}
+        "@babel/preset-react",
+    ],
+    plugins: [
+        "@babel/plugin-transform-arrow-functions",
+        "@babel/plugin-transform-react-jsx",
+    ],
+};
